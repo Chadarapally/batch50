@@ -1,0 +1,31 @@
+…or create a new repository on the command line
+echo "# batch50" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/Chadarapally/batch50.git
+git push -u origin master
+
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/Chadarapally/batch50.git
+git push -u origin master
+
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+
+Step: 1
+Download Git for Windows Git download Package (https://git-scm.com/download/win)
+
+Step: 2
+Download Anaconda
+
+Step: 3
+After installing Anaconda, open Cmd prompt
+type ipython notebook
+
+
+
+

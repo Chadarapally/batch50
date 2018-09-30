@@ -1,0 +1,206 @@
+COnfig Git hub, to your local machine with your GITHUB User Name and Email.
+
+C:\batch50>git config --global user.name chadarapally
+
+C:\batch50>git config --global user.email chadarapally.arun@gmail.com
+
+# To check which user is linked between your system and Github
+C:\batch50>git config -l
+
+***************************************************************
+# to check files instead of ls or ls - latr
+
+C:\batch50>dir
+
+****************************************************************
+
+#One time, we need to create .git folder
+
+C:\batch50>git init
+Initialized empty Git repository in C:/batch50/.git/
+
+C:\batch50>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .ipynb_checkpoints/
+        21_Sep_2018_Variables.ipynb
+        24_Sep_Defining Intiger.ipynb
+        24_Sep_Variable_Homework.ipynb
+        25 Sep_Class.ipynb
+        Assgn_20Sep.ipynb
+        Untitled.ipynb
+        Variables.ipynb
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+*******************************************************************************
+
+# Adding file from your local machine to Git Hub
+
+C:\batch50>git add Variables.ipynb
+warning: LF will be replaced by CRLF in Variables.ipynb.
+The file will have its original line endings in your working directory
+
+C:\batch50>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   Variables.ipynb
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .ipynb_checkpoints/
+        21_Sep_2018_Variables.ipynb
+        24_Sep_Defining Intiger.ipynb
+        24_Sep_Variable_Homework.ipynb
+        25 Sep_Class.ipynb
+        Assgn_20Sep.ipynb
+        Untitled.ipynb
+
+
+*******************************************************************************
+
+TO Add all files from your system
+
+C:\batch50>git add .
+C:\batch50>git status
+
+**************************************************************************
+
+# To add updated file versioning and provding commit/Recover point.
+
+C:\batch50>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   .ipynb_checkpoints/21_Sep_2018_Variables-checkpoint.ipynb
+        new file:   .ipynb_checkpoints/24_Sep_Defining Intiger-checkpoint.ipynb
+        new file:   .ipynb_checkpoints/24_Sep_Variable_Homework-checkpoint.ipynb
+        new file:   .ipynb_checkpoints/25 Sep_Class-checkpoint.ipynb
+        new file:   .ipynb_checkpoints/Assgn_20Sep-checkpoint.ipynb
+        new file:   .ipynb_checkpoints/Untitled-checkpoint.ipynb
+        new file:   .ipynb_checkpoints/Variables-checkpoint.ipynb
+        new file:   21_Sep_2018_Variables.ipynb
+        new file:   24_Sep_Defining Intiger.ipynb
+        new file:   24_Sep_Variable_Homework.ipynb
+        new file:   25 Sep_Class.ipynb
+        new file:   Assgn_20Sep.ipynb
+        new file:   Untitled.ipynb
+        new file:   Variables.ipynb
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   24_Sep_Variable_Homework.ipynb
+
+
+C:\batch50>git add .
+warning: LF will be replaced by CRLF in 24_Sep_Variable_Homework.ipynb.
+The file will have its original line endings in your working directory
+
+C:\batch50>git commit -m "added modified 24_sep homework."
+[master (root-commit) ff9a7f3] added modified 24_sep homework.
+ 14 files changed, 2628 insertions(+)
+ create mode 100644 .ipynb_checkpoints/21_Sep_2018_Variables-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/24_Sep_Defining Intiger-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/24_Sep_Variable_Homework-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/25 Sep_Class-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/Assgn_20Sep-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/Untitled-checkpoint.ipynb
+ create mode 100644 .ipynb_checkpoints/Variables-checkpoint.ipynb
+ create mode 100644 21_Sep_2018_Variables.ipynb
+ create mode 100644 24_Sep_Defining Intiger.ipynb
+ create mode 100644 24_Sep_Variable_Homework.ipynb
+ create mode 100644 25 Sep_Class.ipynb
+ create mode 100644 Assgn_20Sep.ipynb
+ create mode 100644 Untitled.ipynb
+ create mode 100644 Variables.ipynb
+
+C:\batch50>
+
+*****************************************************************************
+
+# To validate what files are committed.
+
+C:\batch50>git log --oneline
+ff9a7f3 (HEAD -> master) added modified 24_sep homework.
+
+# ff9a7f3 - Commit Id for recover.
+
+*******************************************************************************
+##################  For more details go to Git- Tutorial pdf
+
+********************************************************************************
+
+What ever we created till now, it's on local Repository in GIT HUB.
+NOW, we need to link the local repository to Remote Repository in Git Hub
+
+C:\batch50>git remote add origin https://github.com/Chadarapally/batch50.git # this link should be copied from GITHUB.com your repository#
+
+********************************************************************************
+
+
+# To push files form local repository to Git hub repository
+C:\batch50>git push origin master
+
+C:\batch50>git push origin master
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Username for 'https://github.com':
+Password for 'https://github.com':
+remote: Anonymous access to Chadarapally/batch50.git denied.
+fatal: Authentication failed for 'https://github.com/Chadarapally/batch50.git/'
+
+C:\batch50>git push origin master
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 4.84 KiB | 619.00 KiB/s, done.
+Total 11 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas: 100% (6/6), done.
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/Chadarapally/batch50/pull/new/master
+remote:
+To https://github.com/Chadarapally/batch50.git
+ * [new branch]      master -> master
+
+C:\batch50>
+
+
+************************************************************
+
+# to Clone the repository and pull it to your local machine.
+
+C:\batch50>mkdir classnotes
+
+C:\batch50>cd classnotes
+
+C:\batch50\classnotes>dir
+
+
+C:\batch50\classnotes>git clone https://github.com/sambapython/batch50.git
+
+C:\batch50\classnotes\batch50>Dir
+
+************************************************************
+
+# To Pull the files/Refresh from the cloned oneline
+
+C:\batch50\classnotes\batch50>git pull origin master
